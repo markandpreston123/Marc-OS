@@ -1,0 +1,185 @@
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(361, 588)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.output = QtWidgets.QLabel(self.centralwidget)
+        self.output.setGeometry(QtCore.QRect(10, 0, 341, 91))
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.output.setFont(font)
+        self.output.setFrameShape(QtWidgets.QFrame.Box)
+        self.output.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.output.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.output.setObjectName("output")
+        self.percentage = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("%"))
+        self.percentage.setGeometry(QtCore.QRect(10, 120, 75, 75))
+        self.percentage.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.percentage.setObjectName("percentage")
+        self.clear = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("C"))
+        self.clear.setGeometry(QtCore.QRect(90, 120, 75, 75))
+        self.clear.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.clear.setObjectName("clear")
+        self.arrow_button = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.remove_it())
+        self.arrow_button.setGeometry(QtCore.QRect(170, 120, 75, 75))
+        self.arrow_button.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.arrow_button.setObjectName("arrow_button")
+        self.slash = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("/"))
+        self.slash.setGeometry(QtCore.QRect(260, 120, 81, 75))
+        self.slash.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.slash.setObjectName("slash")
+        self.times = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("*"))
+        self.times.setGeometry(QtCore.QRect(260, 220, 81, 75))
+        self.times.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.times.setObjectName("times")
+        self.seven = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("7"))
+        self.seven.setGeometry(QtCore.QRect(10, 220, 75, 75))
+        self.seven.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.seven.setObjectName("seven")
+        self.nine = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("9"))
+        self.nine.setGeometry(QtCore.QRect(180, 220, 75, 75))
+        self.nine.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.nine.setObjectName("nine")
+        self.eight = QtWidgets.QPushButton(self.centralwidget,  clicked=lambda: self.press_it("8"))
+        self.eight.setGeometry(QtCore.QRect(100, 220, 75, 75))
+        self.eight.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.eight.setObjectName("eight")
+        self.four = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("4"))
+        self.four.setGeometry(QtCore.QRect(10, 310, 75, 75))
+        self.four.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.four.setObjectName("four")
+        self.pushButton_14 = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.math_it())
+        self.pushButton_14.setGeometry(QtCore.QRect(260, 310, 81, 75))
+        self.pushButton_14.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.pushButton_14.setObjectName("pushButton_14")
+        self.six = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("6"))
+        self.six.setGeometry(QtCore.QRect(180, 310, 75, 75))
+        self.six.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.six.setObjectName("six")
+        self.five = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("5"))
+        self.five.setGeometry(QtCore.QRect(100, 310, 75, 75))
+        self.five.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.five.setObjectName("five")
+        self.one = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("1"))
+        self.one.setGeometry(QtCore.QRect(10, 400, 75, 75))
+        self.one.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.one.setObjectName("one")
+        self.two = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("2"))
+        self.two.setGeometry(QtCore.QRect(100, 400, 75, 75))
+        self.two.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.two.setObjectName("two")
+        self.pushButton_18 = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("+"))
+        self.pushButton_18.setGeometry(QtCore.QRect(260, 400, 81, 75))
+        self.pushButton_18.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.pushButton_18.setObjectName("pushButton_18")
+        self.equals = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.math_it())
+        self.equals.setGeometry(QtCore.QRect(260, 480, 101, 75))
+        self.equals.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.equals.setObjectName("equals")
+        self.three = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("3"))
+        self.three.setGeometry(QtCore.QRect(180, 400, 71, 75))
+        self.three.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.three.setObjectName("three")
+        self.zero = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.press_it("0"))
+        self.zero.setGeometry(QtCore.QRect(100, 480, 75, 75))
+        self.zero.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.zero.setObjectName("zero")
+        self.point = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.dot_it())
+        self.point.setGeometry(QtCore.QRect(180, 480, 75, 75))
+        self.point.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.point.setObjectName("point")
+        self.plus_minus = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.plus_minus_it())
+        self.plus_minus.setGeometry(QtCore.QRect(10, 480, 75, 75))
+        self.plus_minus.setStyleSheet("font: 26pt \"MS Shell Dlg 2\";")
+        self.plus_minus.setObjectName("plus_minus")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionAbout = QtWidgets.QAction(MainWindow)
+        self.actionAbout.setObjectName("actionAbout")
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def dot_it(self):
+        screen = self.output.text()
+        if screen[-1] == ".":
+            pass
+        else:
+            self.output.setText(f'{screen}.')
+    def math_it(self):
+        try:
+            screen = self.output.text()
+            answer = eval(screen)
+            self.output.setText(str(answer))
+        except:
+            if ZeroDivisionError:
+                error = QMessageBox()
+                error.setText(f"Error: It's not possible to divied by 0.")
+                error.exec_()
+            else:
+                error = QMessageBox()
+                error.setText("An unknown error occured!")
+                error.exec_()
+    def plus_minus_it(self):
+        screen = self.output.text()
+        if "-" in screen:
+            self.output.setText(screen.replace("-", ""))
+        else:
+            self.output.setText(f'-{screen}')
+
+    def remove_it(self):
+        screen = self.output.text()
+        screen = screen[-1]
+        self.output.setText(screen)
+    def press_it(self, pressed):
+        if pressed == "C":
+            self.output.setText("0")
+        else:
+            if self.output.text() == "0":
+                self.output.setText(" ")
+            self.output.setText(f'{self.output.text()}{pressed}')
+        
+    
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Marc Calulator"))
+        self.output.setText(_translate("MainWindow", "0"))
+        self.percentage.setText(_translate("MainWindow", "%"))
+        self.clear.setText(_translate("MainWindow", "C"))
+        self.arrow_button.setText(_translate("MainWindow", ">>"))
+        self.slash.setText(_translate("MainWindow", "/"))
+        self.times.setText(_translate("MainWindow", "*"))
+        self.seven.setText(_translate("MainWindow", "7"))
+        self.nine.setText(_translate("MainWindow", "9"))
+        self.eight.setText(_translate("MainWindow", "8"))
+        self.four.setText(_translate("MainWindow", "4"))
+        self.pushButton_14.setText(_translate("MainWindow", "-"))
+        self.six.setText(_translate("MainWindow", "6"))
+        self.five.setText(_translate("MainWindow", "5"))
+        self.one.setText(_translate("MainWindow", "1"))
+        self.two.setText(_translate("MainWindow", "2"))
+        self.pushButton_18.setText(_translate("MainWindow", "+"))
+        self.equals.setText(_translate("MainWindow", "="))
+        self.three.setText(_translate("MainWindow", "3"))
+        self.zero.setText(_translate("MainWindow", "0"))
+        self.point.setText(_translate("MainWindow", "."))
+        self.plus_minus.setText(_translate("MainWindow", "+/-"))
+        self.actionAbout.setText(_translate("MainWindow", "About..."))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

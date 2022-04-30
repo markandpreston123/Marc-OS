@@ -24,7 +24,8 @@ Apps:
 4) Settings
 5) Terminal/Command Prompt
 6) Marc Calculator
-7) Shut Down""")
+7) Marc Calculator (GUI)
+78) Shut Down""")
 
 while True:
         home_input = input("Enter a choice: ")
@@ -68,5 +69,7 @@ Hostname: {hostname}
         if home_input == '6':
             os.startfile('calculator.py')
         if home_input == '7':
+            os.startfile('calc_ui.pyw')
+        if home_input == '8':
             os.startfile('shutdown.py')
             exit()
